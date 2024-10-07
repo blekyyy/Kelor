@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detergen Alami Daun Kelor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        nav {
+            background-color: #333;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 15px;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 5px 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: #4CAF50;
+            border-radius: 5px;
+        }
+
+        main {
+            padding: 50px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section {
+            display: none;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section.active {
+            display: block;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        section p, ul {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            main {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Detergen Alami dari Daun Kelor</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home" onclick="showSection('home')">Home</a></li>
+            <li><a href="#about" onclick="showSection('about')">Tentang Produk</a></li>
+            <li><a href="#benefits" onclick="showSection('benefits')">Manfaat</a></li>
+            <li><a href="#usage" onclick="showSection('usage')">Cara Penggunaan</a></li>
+            <li><a href="#contact" onclick="showSection('contact')">Kontak Kami</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Halaman Home -->
+        <section id="home" class="active">
+            <h2>Selamat Datang di Detergen Alami Daun Kelor</h2>
+            <p>Kami menyediakan detergen alami dari daun kelor yang aman dan ramah lingkungan. Cocok untuk berbagai kebutuhan rumah tangga dan menjaga kesehatan kulit Anda.</p>
+            <img src="gambar-produk.jpg" alt="Detergen Alami Daun Kelor">
+        </section>
+
+        <!-- Halaman Tentang Produk -->
+        <section id="about">
+            <h2>Tentang Produk Kami</h2>
+            <p>Detergen kami dibuat dari bahan alami daun kelor organik tanpa bahan kimia berbahaya. Melalui proses yang ramah lingkungan, detergen ini aman untuk semua jenis kulit, bahkan kulit sensitif.</p>
+            <img src="tentang-produk.jpg" alt="Tentang Detergen Daun Kelor">
+        </section>
+
+        <!-- Halaman Manfaat Produk -->
+        <section id="benefits">
+            <h2>Manfaat Detergen dari Daun Kelor</h2>
+            <ul>
+                <li>100% alami dan ramah lingkungan</li>
+                <li>Aman untuk kulit sensitif</li>
+                <li>Efektif membersihkan noda membandel tanpa merusak kain</li>
+                <li>Memiliki aroma segar dari bahan alami tanpa tambahan pewangi sintetis</li>
+            </ul>
+            <img src="manfaat-produk.jpg" alt="Manfaat Detergen Daun Kelor">
+        </section>
+
+        <!-- Halaman Cara Penggunaan -->
+        <section id="usage">
+            <h2>Cara Penggunaan Detergen Daun Kelor</h2>
+            <p>Campurkan satu sendok detergen ke dalam 5 liter air. Rendam pakaian selama 15-20 menit, lalu bilas dengan air bersih. Detergen ini efektif untuk penggunaan di air dingin maupun hangat.</p>
+            <img src="cara-penggunaan.jpg" alt="Cara Penggunaan Detergen Daun Kelor">
+        </section>
+
+        <!-- Halaman Kontak Kami -->
+        <section id="contact">
+            <h2>Kontak Kami</h2>
+            <p>Hubungi kami untuk informasi lebih lanjut:</p>
+            <p>Email: <a href="mailto:info@detergenkelor.com">info@detergenkelor.com</a></p>
+            <img src="kontak.jpg" alt="Kontak Kami">
+        </section>
+    </main>
+
+   
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
